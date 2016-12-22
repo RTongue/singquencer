@@ -1,0 +1,80 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+body {
+  background-color: #e8e5e3;
+  margin: 4rem;
+  font-color: rgba(0, 0, 0, 0.9);
+  font-size: 0;
+  line-height: .5;
+  text-align: center; }
+
+h1 {
+  font-size: 4rem;
+  font-family: Playfair Display;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 4rem; }
+
+div.sheetmusic {
+  display: inline-block;
+  text-align: initial; }
+
+section.staff {
+  clear: both; }
+
+section.bar {
+  float: left;
+  height: 4.1rem;
+  background-image: linear-gradient(rgba(38, 77, 115, 0.5) 1px, transparent 1px);
+  background-size: 100% 1rem;
+  background-origin: content-box;
+  font-size: 10rem;
+  width: 20rem;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  margin-bottom: 4rem; }
+
+section.bar:first-child {
+  border-left: 4px solid #000; }
+
+section.bar:last-child {
+  border-right: 4px solid #000; }
+
+.g-clef {
+  font-size: 10rem;
+  padding-right: 0;
+  margin-right: -4rem; }
+
+span.note {
+  font-size: 5rem;
+  margin-right: -3rem;
+  display: inline-block;
+  position: relative; }
+
+span.eighth {
+  margin-left: 2rem; }
+
+.lower-c {
+  bottom: -.5rem; }
+
+.lower-g {
+  bottom: 1.5rem; }
+
+.lower-a {
+  bottom: 2.3rem; }
+
+.lower-f {
+  bottom: 1.2rem; }
+
+.lower-e {
+  bottom: .5rem; }
+
+.f-clef {
+  font-size: 5rem;
+  position: relative;
+  top: -2rem; }
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-size: 3rem; }
+  section.bar {
+    float: none; } }
