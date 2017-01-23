@@ -49,6 +49,9 @@ class TempoContainer extends Component {
             console.log(this.props.state);
           }
         }}
+        setTempo={this.props.setTempo}
+        tempo={this.props.tempo}
+        woodblock={this.props.woodblock}
       />
     )
   }
@@ -59,7 +62,8 @@ const mapStateToProps = (state) => {
   return {
     tempo: state.tempo,
     isPlaying: state.metronome.isPlaying,
-    state: state
+    state: state,
+    woodblock: state.tracks.woodblock
   };
 };
 

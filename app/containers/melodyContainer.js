@@ -48,9 +48,9 @@ class MelodyContainer extends Component {
 
       Tone.Transport.scheduleOnce(t => {
         note = getPitchData();
+        console.log(note);
         if (!scheduleObj.note) {
           scheduleObj.note = note;
-          // scheduleObj.duration = scheduleObj.time.add('8n');
         } else if (scheduleObj.note === note) {
           scheduleObj.duration.add('16n');
         } else {
@@ -66,9 +66,9 @@ class MelodyContainer extends Component {
   }
 
   process (note, time, duration) {
-    console.log('IN process', duration.eval());
-    // if (note - 69 > 13 || note - 69 < -13) return;
-    console.log('post conditional');
+    // console.log('IN process', duration.eval());
+    // if (note - 69 > 18 || note - 69 < -30) return;
+    // console.log('post conditional');
     time = time.sub('16n').quantize('16n', 0.5);
     let loop = new Tone.Loop((t) => {
       console.log('in the loop');
@@ -79,8 +79,10 @@ class MelodyContainer extends Component {
   render () {
     return (
       <Melody
+        track={this.props.tracks[this.props.name]}
         record={this.record}
         name={this.props.name}
+        tempo={this.props.tempo}
       />
     );
   }

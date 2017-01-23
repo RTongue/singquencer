@@ -8,6 +8,7 @@ import { audioActionCreators } from 'react-redux-webaudio';
 import App from '../components/app';
 
 import { setBeat, setBar, togglePlay } from '../reducers/metronome';
+import { addTrack } from '../reducers/tracks';
 
 let interval = null;
 let toneInterval = null;
@@ -27,6 +28,9 @@ class AppContainer extends Component {
     Tone.Transport.timeSignature = 4;
     var woodblock = new Tone.Player('../../public/sounds/woodblock.wav').toMaster();
     this.setState({metronome: woodblock})
+    const trackObj = {};
+    trackObj.woodblock = woodblock;
+    this.props.addTrack(trackObj);
 
     Tone.Buffer.onload = (function() {
 			//start the Transport for the events to start
@@ -56,12 +60,20 @@ class AppContainer extends Component {
     } else if (!this.props.isPlaying) {
       clearInterval(interval);
       Tone.Transport.stop();
+    } else if (this.props.tempo
+          && this.props.isPlaying) {
+      Tone.Transport.bpm.rampTo(this.props.tempo);
     }
   }
 
   render() {
     return (
-      <App metronome={this.state.metronome}/>
+      <App metronome={this.state.metronome}
+        bass={this.props.bass}
+        snare={this.props.snare}
+        kick={this.props.kick}
+        piano={this.props.piano}
+      />
     );
   }
 }
@@ -71,7 +83,11 @@ const mapStateToProps = (state) => {
     tempo: state.tempo,
     currentBeat: state.metronome.beat,
     isPlaying: state.metronome.isPlaying,
-    kickLoop: state.tracks.kickLoop
+    kickLoop: state.tracks.kickLoop,
+    bass: state.tracks.BASS,
+    snare: state.tracks.SNARE,
+    kick: state.tracks.KICK,
+    piano: state.tracks.PIANO
   };
 };
 
@@ -85,6 +101,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     setBar: (time) => {
       dispatch(setBar(time));
+    },
+    addTrack: (track) => {
+      dispatch(addTrack(track));
     }
     // yourNoiseyAction: () => {
     //   // create some audio nodes
