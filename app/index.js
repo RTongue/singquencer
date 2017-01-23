@@ -2,19 +2,20 @@
 
 import React, { Component } from 'react';
 import ReactDOM, { render } from 'react-dom';
+import {Router, Route, hashHistory, IndexRedirect} from 'react-router';
 import { Provider } from 'react-redux';
 import store from './store';
-import ShowPitchContainer from './showPitchContainer';
-// VEX FLOW
-import Vex from 'vexflow';
-const VF = Vex.Flow;
 // Pitch Detect function
-import { toggleLiveInput } from './pitchdetect';
+import { toggleLiveInput } from './components/pitchdetect';
+
+import AppContainer from './containers/appContainer';
 
 
 render(
   <Provider store={store}>
-    <ShowPitchContainer />
+    <Router history={hashHistory}>
+      <Route path="/" component={AppContainer}/>
+    </Router>
   </Provider>,
   document.getElementById('app')
 );

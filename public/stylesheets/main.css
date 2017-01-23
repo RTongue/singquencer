@@ -1,80 +1,77 @@
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+@keyframes pulse {
+  0% {
+    background: #222; }
+  100% {
+    background-color: #530;
+    border-color: #ff9900; } }
+
 body {
-  background-color: #e8e5e3;
-  margin: 4rem;
-  font-color: rgba(0, 0, 0, 0.9);
-  font-size: 0;
-  line-height: .5;
-  text-align: center; }
+  background-color: #272927;
+  font-color: white;
+  font-size: 24;
+  text-align: center;
+  font-family: anonymous pro; }
 
 h1 {
-  font-size: 4rem;
-  font-family: Playfair Display;
-  font-weight: 100;
-  line-height: 1.2;
-  margin-bottom: 4rem; }
+  font-size: 50;
+  margin: auto;
+  padding: 5px;
+  width: 200px;
+  border: 2px solid #333;
+  background: #222;
+  color: #22ff55;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: #530;
+  border-color: #ff9900; }
+  h1:hover {
+    background-color: #530;
+    border-color: #ff9900; }
+  h1.active {
+    border-color: #99ccaa;
+    color: white;
+    animation: pulse 0.5s ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
 
-div.sheetmusic {
-  display: inline-block;
-  text-align: initial; }
+h2 {
+  font-size: 18; }
 
-section.staff {
-  clear: both; }
+.loop {
+  height: 500px;
+  width: 500px;
+  background-image: url(background.png);
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px 0, 0, 0, 0.4; }
 
-section.bar {
-  float: left;
-  height: 4.1rem;
-  background-image: linear-gradient(rgba(38, 77, 115, 0.5) 1px, transparent 1px);
-  background-size: 100% 1rem;
-  background-origin: content-box;
-  font-size: 10rem;
-  width: 20rem;
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
-  margin-bottom: 4rem; }
+.beat {
+  height: 500px;
+  width: 125px;
+  background-color: pink;
+  opacity: 0.5;
+  border-radius: 15px; }
 
-section.bar:first-child {
-  border-left: 4px solid #000; }
+.track {
+  background-color: grey;
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  opacity: 1;
+  fill: #999999;
+  fill-opacity: 1;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  box-shadow: 5px 5px 2px black; }
+  .track:hover {
+    background-color: #530;
+    border-color: #ff9900; }
 
-section.bar:last-child {
-  border-right: 4px solid #000; }
-
-.g-clef {
-  font-size: 10rem;
-  padding-right: 0;
-  margin-right: -4rem; }
-
-span.note {
-  font-size: 5rem;
-  margin-right: -3rem;
-  display: inline-block;
-  position: relative; }
-
-span.eighth {
-  margin-left: 2rem; }
-
-.lower-c {
-  bottom: -.5rem; }
-
-.lower-g {
-  bottom: 1.5rem; }
-
-.lower-a {
-  bottom: 2.3rem; }
-
-.lower-f {
-  bottom: 1.2rem; }
-
-.lower-e {
-  bottom: .5rem; }
-
-.f-clef {
-  font-size: 5rem;
-  position: relative;
-  top: -2rem; }
-
-@media all and (max-width: 800px) {
-  h1 {
-    font-size: 3rem; }
-  section.bar {
-    float: none; } }
+.track:active {
+  vertical-align: top;
+  box-shadow: 0px 0px 0px black;
+  transform: scale(0.95); }

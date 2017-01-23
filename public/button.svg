@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 156.95 64.540217"
+   height="18.214684mm"
+   width="44.294777mm">
+  <defs
+     id="defs4">
+    <filter
+       id="filter4138"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood4140"
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.74902" />
+      <feComposite
+         id="feComposite4142"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur4144"
+         result="blur"
+         stdDeviation="4"
+         in="composite1" />
+      <feOffset
+         id="feOffset4146"
+         result="offset"
+         dy="5"
+         dx="5" />
+      <feComposite
+         id="feComposite4148"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+    <filter
+       id="filter4150"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood4152"
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.74902" />
+      <feComposite
+         id="feComposite4154"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur4156"
+         result="blur"
+         stdDeviation="1.5"
+         in="composite1" />
+      <feOffset
+         id="feOffset4158"
+         result="offset"
+         dy="2"
+         dx="2" />
+      <feComposite
+         id="feComposite4160"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-221.61244,-352.68787)"
+     id="layer1">
+    <rect
+       y="358.06622"
+       x="234.6916"
+       height="53.783508"
+       width="130.79166"
+       id="rect4136"
+       style="opacity:1;fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4150)" />
+  </g>
+</svg>
