@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Tone from 'tone';
+import keydown from 'react-keydown';
 import p5 from 'p5';
 const map = new p5().map;
+
+
 
 import Track from '../components/track';
 
@@ -24,7 +27,6 @@ class TrackContainer extends Component {
     trackObj[this.props.name] = track;
     this.props.addTrack(trackObj);
   }
-
 
   tap () {
     // const currentBeats = this.state.rhythm;
@@ -67,6 +69,7 @@ class TrackContainer extends Component {
               tap={this.tap}
               schedule={this.calcRhythm}
               name={this.props.name}
+              tempo={this.props.tempo}
             />);
   }
 }

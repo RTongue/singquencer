@@ -37,6 +37,11 @@ h1 {
 h2 {
   font-size: 18; }
 
+h3 {
+  display: inline-block;
+  color: white;
+  margin: 10px; }
+
 .loop {
   height: 500px;
   width: 500px;
@@ -75,3 +80,20 @@ h2 {
   vertical-align: top;
   box-shadow: 0px 0px 0px black;
   transform: scale(0.95); }
+
+.form {
+  height: 200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 60%; }
+
+.formField {
+  margin-bottom: 5rem; }
+
+.control {
+  display: inline-table; }
+
+#controls {
+  margin: auto;
+  padding: 5px;
+  display: block; }
