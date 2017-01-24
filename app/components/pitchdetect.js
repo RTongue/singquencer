@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-import PitchAnalyzer from '../../modules/pitch.js/src/pitch.js';
+// import PitchAnalyzer from '../../modules/pitch.js/src/pitch.js';
 
 import store from '../store';
 import { changeThePitch } from '../reducers/action-creators';
@@ -83,8 +83,8 @@ window.onload = function() {
 	console.log('WINDOW LOADED');
 	audioContext = new AudioContext();
 	const MAX_SIZE = Math.max(4, Math.floor(audioContext.sampleRate / 5000));	// corresponds to a 5kHz signal
-	pitch2 = new PitchAnalyzer(44100);
-	console.log(pitch2);
+	// pitch2 = new PitchAnalyzer(44100);
+	// console.log(pitch2);
 };
 
 function error() {
