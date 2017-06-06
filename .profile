@@ -1,3 +1,4 @@
 echo "now running .profile"
-npm install --dev
+mkdir dist
+npm run build
 echo "done running .profile"
