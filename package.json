@@ -8,7 +8,7 @@
     "build": "webpack",
     "build-watch": "webpack -w",
     "start": "node server/start.js",
-    "build-css": "node-sass --include-path scss scss/main.scss public/stylesheets/main.css",
+    "build-css": "node-sass --include-path scss scss/main.scss public/stylesheets/main.css"
   },
   "author": "RTongue <r.tongue@gmail.com>",
   "license": "ISC",
