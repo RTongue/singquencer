@@ -8,7 +8,6 @@ module.exports = {
     path: __dirname,
     filename: './dist/bundle.js'
   },
-  watch: true,
   context: __dirname,
   devtool: 'source-map',
   resolve: {
