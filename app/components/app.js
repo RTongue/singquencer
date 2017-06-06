@@ -10,10 +10,9 @@ import TempoContainer from '../containers/tempoContainer';
 import MainLoopContainer from '../containers/mainLoopContainer';
 import Metronome from '../components/metronome';
 import TrackContainer from '../containers/trackContainer';
-import MelodyContainer from '../containers/MelodyContainer';
+import MelodyContainer from '../containers/melodyContainer';
 
 export default function App (props) {
-  console.log('in the app');
   const time = map(1.75, 0, 3.75, 0, 15);
 
   function renderTrack(container) {
