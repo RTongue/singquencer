@@ -9,7 +9,7 @@
     "build-watch": "webpack -w",
     "start": "node server/start.js",
     "build-css": "node-sass --include-path scss scss/main.scss public/stylesheets/main.css",
-    "postinstall": "mkdir dist && npm run build-css && npm run build"
+    "postinstall": "mkdir dist && npm run build"
   },
   "author": "RTongue <r.tongue@gmail.com>",
   "license": "ISC",
